@@ -1,9 +1,9 @@
 /** @format */
 
-// api.ts
 import axios from "axios";
 import { ExchangeRates } from "./type";
-import formatDate from "./index";
+
+import formatDate from "./formatdate";
 
 export const fetchData = async (
   startDate: Date,

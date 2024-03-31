@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import "./SetDate.css";
+import formatDate from "../func/formatdate";
 
 interface SetdateProps {
   startDate: Date;
@@ -16,13 +17,6 @@ const SetDate = ({
   handlestartdate,
   handleenddate,
 }: SetdateProps) => {
-  const formatDate = (date: Date): string => {
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
-    return `${year}-${month}-${day}`;
-  };
-
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleClick = () => {
